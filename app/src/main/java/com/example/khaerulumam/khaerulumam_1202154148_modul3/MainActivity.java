@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         DaftarItem();
 
 
+        //melakukan inisiasi pada recyclerview
         rvView = (RecyclerView) findViewById(R.id.recyclerview);
         rvView.setHasFixedSize(true);
 
@@ -76,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = new Adapter(dataMenu,datadesk,gambar);
         rvView.setAdapter(adapter);
 
+        //agar saat di landscape bentuknya menjadi grid
         int grid = getResources().getInteger(R.integer.grid_column_count);
         rvView.setLayoutManager(new GridLayoutManager(this,grid));
     }
